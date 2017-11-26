@@ -5,7 +5,6 @@ public class demo3 {
             System.out.println("Ei ole pariton luku");
         }
 
-
         //tulostetaan tähti kahdessa osassa
 
         int puolivali = annettuLuku / 2 + 1;
