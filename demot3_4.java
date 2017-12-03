@@ -12,4 +12,5 @@ public class demot3_4 {
         String valmis = jono.replaceAll("[^a-zåäöA-ZÅÄÖ0-9]"," "); //poistaa kaiken joka ei sovi regexiin
         return valmis;
     }
+
 }
