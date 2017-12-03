@@ -6,9 +6,9 @@ public class demot3_6 {
         Scanner lukija = new Scanner(System.in);
         System.out.println("Syötä sanoja");
         String sanat = lukija.nextLine();
-        int sanamaara = laskeSanat(sanat);
-        kokonaisLukujenSumma(sanamaara);
-        if (onkoPalindromi(sanat)){
+        int sanamaara = laskeSanat(sanat); //lasketaan sanojen määrä
+        kokonaisLukujenSumma(sanamaara);//pyydetään kokonaislukuja
+        if (onkoPalindromi(sanat)){ //tarkistetaan, onko palindromi
             System.out.println("No on.");
         }
 
@@ -24,14 +24,14 @@ public class demot3_6 {
     public static void kokonaisLukujenSumma(int n){
         Scanner lukija = new Scanner(System.in);
         int summa = 0;
-        for (int i = 0; i <= n; i++){
+        for (int i = 0; i <= n; i++){ //kysytään käyttäjältä niin monta kertaa luku kuin sanoja oli
             System.out.println("Syötä luku");
             int luettu = lukija.nextInt();
             summa += luettu;
         }lukija.close();
         System.out.println(summa);
     }
-    public static boolean onkoPalindromi(String mjono){
+    public static boolean onkoPalindromi(String mjono){ //aiemmasta tehtävästä
         for (int i = 0; i < mjono.length() / 2; i++){
             char c = mjono.charAt(i);
             char d = mjono.charAt(mjono.length()-1-i);
