@@ -4,9 +4,9 @@ up(rc, 5); extend(rc, 5); ekat(rc, 5); ekat(rc, 5); } public static void up(Robo
 up(rc, 3); 
 extend(rc, 5); 
 down(rc, 2); 
-siirto (rc, 6, 1); //Laatikko 1 siirto 
-(rc, 6, 2); //Laatikko 1.5 
-siirto (rc, 6, 3); //Laatikko2 2 
+siirto(rc, 6, 1); //Laatikko 1 
+siirto(rc, 6, 2); //Laatikko 1.5 
+siirto(rc, 6, 3); //Laatikko2 2 
 rc.up(); 
 rc.withdraw(); 
 siirto2(rc); 
@@ -14,6 +14,37 @@ siirto2(rc);
 siirto2(rc, 2); 
 siirto2(rc); 
 siirto2(rc); 
-siirto2(rc, 2); } public static void up(RobotCommander rc, int a){ for (int i = 0; i < a; i++){ rc.up(); } } public static void down(RobotCommander rc, int a){ for (int i = 0; i < a; i++){ rc.down(); } } public static void extend(RobotCommander rc, int a){ for (int i = 0; i < a; i++){ rc.extend(); } } public static void withdraw(RobotCommander rc, int a){ for (int i = 0; i < a; i++){ rc.withdraw(); } } public static void siirto(RobotCommander rc, int a, int b){ rc.grab(); if (b==3){rc.up();} extend(rc, a); rc.drop(); if (b == 1){ rc.up();} if (b==2){ rc.down(); } if (b == 1){withdraw(rc, a+1);} else withdraw(rc, a); } public static void siirto2(RobotCommander rc){ rc.grab(); extend(rc, 6); rc.drop(); withdraw(rc, 6); rc.down(); } public static void siirto2(RobotCommander rc, int a){ rc.grab(); up(rc, a); extend(rc, 6); rc.drop(); withdraw(rc, 7);
+siirto2(rc, 2); 
+}
 
-
+public static void up(RobotCommander rc, int a){ 
+    for (int i = 0; i < a; i++){ rc.up(); } } 
+    
+public static void down(RobotCommander rc, int a){ 
+    for (int i = 0; i < a; i++){ rc.down(); } } 
+    
+public static void extend(RobotCommander rc, int a){ 
+    for (int i = 0; i < a; i++){ rc.extend(); } } 
+    
+public static void withdraw(RobotCommander rc, int a){ 
+    for (int i = 0; i < a; i++){ rc.withdraw(); } } 
+    
+public static void siirto(RobotCommander rc, int a, int b){ 
+    rc.grab(); 
+    if (b==3){rc.up();} 
+    extend(rc, a); 
+    rc.drop(); 
+    if (b == 1){ rc.up();} 
+    if (b==2){ rc.down(); } 
+    if (b == 1){withdraw(rc, a+1);} 
+    else withdraw(rc, a); }
+public static void siirto2(RobotCommander rc){ 
+        rc.grab(); 
+        extend(rc, 6); 
+        rc.drop(); withdraw(rc, 6); rc.down(); } 
+public static void siirto2(RobotCommander rc, int a){ 
+    rc.grab(); 
+    up(rc, a); 
+    extend(rc, 6); 
+    rc.drop(); 
+    withdraw(rc, 7);
